@@ -1,0 +1,181 @@
+<!--&lt;!&ndash;<h1>Query 6</h1>&ndash;&gt;-->
+
+<!--&lt;!&ndash;  <li *ngFor="let a of items" >&ndash;&gt;-->
+<!--&lt;!&ndash;    {{a.item_name}}&ndash;&gt;-->
+<!--&lt;!&ndash;  </li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<li *ngFor="let d of store_key">&ndash;&gt;-->
+<!--&lt;!&ndash;  {{data_all |json}}&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;  {{d.store_key}} - {{d.items}}&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<li *ngFor="let data of data_all">&ndash;&gt;-->
+<!--&lt;!&ndash;  {{data.store_key}} <br>&ndash;&gt;-->
+<!--&lt;!&ndash;  <span *ngFor="let d of data.items">&ndash;&gt;-->
+<!--&lt;!&ndash;    {{d.item_name}} <br>&ndash;&gt;-->
+<!--&lt;!&ndash;  </span>&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<style type="text/css">-->
+<!--  .studentInfo {-->
+<!--    width: 800px;-->
+<!--    border-collapse: collapse;-->
+<!--    text-align: center;-->
+<!--    vertical-align: middle;-->
+
+<!--  }-->
+
+<!--  .studentInfo td {-->
+<!--    border: 1px solid #ffffff;-->
+<!--    text-align: center;-->
+<!--    vertical-align: middle;-->
+<!--  }-->
+
+<!--  .studentInfo tr:nth-child(even) {-->
+<!--    background-color: rgba(217, 148, 148, 0.76);-->
+<!--    font-weight: bolder;-->
+<!--  }-->
+
+<!--  .studentInfo tr:nth-child(odd) {-->
+<!--    background-color: rgba(248, 194, 194, 0.76);-->
+<!--    font-weight: bolder;-->
+<!--  }-->
+
+
+<!--  .header {-->
+<!--    text-align: center;-->
+<!--    font-weight: bolder;-->
+<!--    background-color: rgba(155, 8, 8, 0.76);-->
+<!--    color: rgb(255, 255, 255);-->
+<!--  }-->
+<!--  .mainRow{-->
+<!--    background-color: rgba(218, 45, 45, 0.71);-->
+<!--    color: rgb(255, 255, 255);-->
+<!--  }-->
+<!--</style>-->
+<!--&lt;!&ndash;<style>&ndash;&gt;-->
+<!--&lt;!&ndash;  table, th , td  {&ndash;&gt;-->
+<!--&lt;!&ndash;    border: 1px solid grey;&ndash;&gt;-->
+<!--&lt;!&ndash;    border-collapse: collapse;&ndash;&gt;-->
+<!--&lt;!&ndash;    padding: 5px;&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;  table tr:nth-child(odd) {&ndash;&gt;-->
+<!--&lt;!&ndash;    background-color: #f1f1f1;&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;  table tr:nth-child(even) {&ndash;&gt;-->
+<!--&lt;!&ndash;    background-color: #ffffff;&ndash;&gt;-->
+<!--&lt;!&ndash;  }&ndash;&gt;-->
+<!--&lt;!&ndash;</style>&ndash;&gt;-->
+<!--&lt;!&ndash;<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>&ndash;&gt;-->
+<!--<body>-->
+
+<!--<div>-->
+<!--  <table class="studentInfo"*ngFor="let data of data_all">-->
+<!--    <tbody><tr>-->
+<!--      <td class="header" colspan="6">Q6:top3 products for store</td>-->
+<!--    </tr>-->
+<!--    <tr class="mainRow">-->
+<!--      <td>Store_id</td>-->
+<!--      <td>top 3 Items</td>-->
+<!--    </tr>-->
+<!--    <tr class="altRow"*ngFor="let d of data.items">-->
+<!--      <td>{{ data.store_key }}</td>-->
+<!--      <td>{{ d.item_name }}</td>-->
+<!--    </tr>-->
+<!--    </tbody>-->
+<!--  </table>-->
+
+<!--&lt;!&ndash;  <table>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr *ngFor="let d of data.items">&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>{{ data.store_key }}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>{{ d.item_name }}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;  </table>&ndash;&gt;-->
+
+<!--</div>-->
+
+<!--<script>-->
+<!--  var app = angular.module('myApp', []);-->
+<!--  app.controller('customersCtrl', function($scope, $http) {-->
+<!--    $http.get("customers.php")-->
+<!--      .then(function (response) {$scope.names = response.data.records;});-->
+<!--  });-->
+<!--</script>-->
+
+<!--</body>-->
+<!--</html>-->
+
+<html>
+<style type="text/css">
+  .studentInfo {
+    width: 1430px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+
+  .studentInfo td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .studentInfo tr:nth-child(even) {
+    background-color: rgba(217, 148, 148, 0.76);
+    font-weight: bolder;
+  }
+
+  .studentInfo tr:nth-child(odd) {
+    background-color: rgba(248, 194, 194, 0.76);
+    font-weight: bolder;
+  }
+
+
+  .header {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgba(155, 8, 8, 0.76);
+    color: rgb(255, 255, 255);
+  }
+  .col-8{
+    width: 1430px;
+    height: 800px;
+    font-family: cursive, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+</style>
+<table class="studentInfo" *ngFor="let data of data_all">
+  <tbody><tr>
+    <td class="header" colspan="6">Q6:top3 products for store</td>
+  </tr>
+  <tr class="mainRow">
+    <td>Store Key</td>
+    <td>Item Name</td>
+  </tr>
+  <tr class="altRow"*ngFor="let d of data.items">
+    <td>{{ data.store_key }}</td>
+    <td>{{ d.item_name }}</td>
+  </tr>
+  </tbody>
+</table>
+<!--<div class="col-8">-->
+<!--  <div class="chart-wrapper">-->
+<!--    <canvas baseChart-->
+<!--            [datasets]="chartData"-->
+<!--            [labels]="chartLabels"-->
+<!--            [options]="chartOptions">-->
+<!--    </canvas>-->
+<!--  </div>-->
+<!--</div>-->
+</html>
+

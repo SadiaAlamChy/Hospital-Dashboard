@@ -1,0 +1,132 @@
+<!--<h1>Query 3</h1>-->
+<!--<div>-->
+<!--  <li *ngFor="let d of data_all">-->
+<!--    {{d.division}} - {{d.total_sale_price}}-->
+<!--  </li>-->
+<!--</div>-->
+<!--<div class="chart-wrapper">-->
+<!--  <canvas baseChart-->
+<!--          [datasets]="chartData"-->
+<!--          [labels]="chartLabels"-->
+<!--          [options]="chartOptions">-->
+<!--  </canvas>-->
+<!--</div>-->
+<!--<style>-->
+<!--  table, th , td  {-->
+<!--    border: 1px solid grey;-->
+<!--    border-collapse: collapse;-->
+<!--    padding: 5px;-->
+<!--  }-->
+<!--  table tr:nth-child(odd) {-->
+<!--    background-color: #f1f1f1;-->
+<!--  }-->
+<!--  table tr:nth-child(even) {-->
+<!--    background-color: #ffffff;-->
+<!--  }-->
+<!--  h2{-->
+<!--    background-color: rgba(205, 92, 92, 0.85)-->
+
+<!--  }-->
+<!--</style>-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-4 p-2">-->
+<!--      <div class="card p-2 text-center">-->
+<!--        <h2 class="text-primary text-center" >Total Sales of Barisal</h2>-->
+<!--        <div class="container" >-->
+<!--          <div class="row">-->
+<!--            <table>-->
+<!--              <tr *ngFor="let d of data_all">-->
+<!--                <td>{{ d.division }}</td>-->
+<!--                <td>{{ d.total_sale_price }}</td>-->
+<!--              </tr>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-8">-->
+<!--      <div class="chart-wrapper">-->
+<!--        <canvas baseChart-->
+<!--                [datasets]="chartData"-->
+<!--                [labels]="chartLabels"-->
+<!--                [options]="chartOptions">-->
+<!--        </canvas>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<html>
+<style type="text/css">
+  .studentInfo {
+    width: 1430px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+
+  .studentInfo td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .studentInfo tr:nth-child(even) {
+    background-color: rgba(217, 148, 148, 0.76);
+    font-weight: bolder;
+  }
+
+  .studentInfo tr:nth-child(odd) {
+    background-color: rgba(248, 194, 194, 0.76);
+    font-weight: bolder;
+  }
+
+
+  .header {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgba(155, 8, 8, 0.76);
+    color: rgb(255, 255, 255);
+  }
+  .col-8{
+    width: 1430px;
+    height: 800px;
+    font-family: cursive, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+</style>
+<table class="studentInfo">
+  <tbody><tr>
+    <td class="header" colspan="6">Q3:WEEK DAY WISE SALES</td>
+  </tr>
+  <tr class="mainRow">
+    <td>Days</td>
+    <td>Total Sales</td>
+  </tr>
+  <tr class="altRow"*ngFor="let d of data_all">
+    <td>{{ d.day }}</td>
+    <td>{{ d.total_sales }}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="col-8">
+  <div class="chart-wrapper">
+    <canvas baseChart
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions">
+    </canvas>
+  </div>
+</div>
+</html>
+
+
+

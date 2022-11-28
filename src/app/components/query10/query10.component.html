@@ -1,0 +1,136 @@
+<!--<h1>Query 10</h1>-->
+<!--&lt;!&ndash;<div>&ndash;&gt;-->
+<!--&lt;!&ndash;  <li *ngFor="let d of data_all">&ndash;&gt;-->
+<!--&lt;!&ndash;    {{d.store_id}} - {{d.month}}- {{d.average_sales}}&ndash;&gt;-->
+<!--&lt;!&ndash;  </li>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--<style>-->
+<!--  table, th , td  {-->
+<!--    border: 1px solid grey;-->
+<!--    border-collapse: collapse;-->
+<!--    padding: 5px;-->
+<!--  }-->
+<!--  table tr:nth-child(odd) {-->
+<!--    background-color: #33FF33;-->
+<!--  }-->
+<!--  table tr:nth-child(even) {-->
+<!--    background-color: #ffffff;-->
+<!--  }-->
+<!--</style>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
+<!--<body>-->
+<!--&lt;!&ndash;<div>&ndash;&gt;-->
+<!--&lt;!&ndash;  <table>&ndash;&gt;-->
+<!--&lt;!&ndash;    <tr *ngFor="let d of data_all">&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>{{ d.store_id }}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>{{ d.month }}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;      <td>{{ d.average_sales }}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;    </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;  </table>&ndash;&gt;-->
+
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--  <title>Bootstrap Example</title>-->
+<!--  <meta charset="utf-8">-->
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+<!--  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+<!--  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--<div class="jumbotron text-center">-->
+<!--  <h1>My First Bootstrap Page-->
+<!--    <div class="container" >-->
+<!--      <div class="row">-->
+<!--        <table>-->
+<!--          <tr *ngFor="let d of data_all">-->
+<!--            <td>{{ d.store_id }}</td>-->
+<!--            <td>{{ d.month }}</td>-->
+<!--            <td>{{ d.average_sales }}</td>-->
+<!--          </tr>-->
+<!--        </table>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </h1>-->
+
+<!--  <p>Resize this responsive page to see the effect!</p>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
+
+<html>
+<style type="text/css">
+  .studentInfo {
+    width: 1430px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+
+  .studentInfo td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .studentInfo tr:nth-child(even) {
+    background-color: rgba(217, 148, 148, 0.76);
+    font-weight: bolder;
+  }
+
+  .studentInfo tr:nth-child(odd) {
+    background-color: rgba(248, 194, 194, 0.76);
+    font-weight: bolder;
+  }
+
+
+  .header {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgba(155, 8, 8, 0.76);
+    color: rgb(255, 255, 255);
+  }
+</style>
+<table class="studentInfo">
+  <tbody><tr>
+    <td class="header" colspan="6">Q10: Month wise Average Sales of Stores</td>
+  </tr>
+  <tr class="mainRow">
+    <td>Store_id</td>
+    <td>Month</td>
+    <td>Average Sales</td>
+  </tr>
+  <tr class="altRow"*ngFor="let d of data_all">
+    <td>{{ d.store_id }}</td>
+    <td>{{ d.month }}</td>
+    <td>{{ d.average_sales }}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="row">
+  <div class="col-md-12">
+    <div style="display: block">
+      <canvas baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend">
+<!--              [type]="barChartType">-->
+<!--              (chartHover)="chartHovered($event)"-->
+<!--              (chartClick)="chartClicked($event)">-->
+
+
+      </canvas>
+    </div>
+  </div>
+
+</div>
+
+</html>

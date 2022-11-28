@@ -1,0 +1,109 @@
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-4 p-2">-->
+<!--      <div class="card p-2 text-center">-->
+<!--        <h2 class="text-primary text-center">Division Wise Sales</h2>-->
+<!--&lt;!&ndash;        <h4 *ngFor="let data of data_all">&ndash;&gt;-->
+<!--&lt;!&ndash;          {{data.division}} - {{data.sales}}&ndash;&gt;-->
+<!--&lt;!&ndash;        </h4>&ndash;&gt;-->
+<!--        <div class="container" >-->
+<!--          <div class="row">-->
+<!--            <table>-->
+<!--              <tr *ngFor="let data of data_all">-->
+<!--                <td>{{ data.division }}</td>-->
+<!--                <td>{{ data.sales }}</td>-->
+<!--              </tr>-->
+<!--            </table>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-8">-->
+<!--      <div class="chart-wrapper">-->
+<!--        <canvas baseChart-->
+<!--                [type]="'bar'"-->
+<!--                [datasets]="chartData"-->
+<!--                [labels]="chartLabels"-->
+<!--                [options]="chartOptions">-->
+<!--        </canvas>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<html>
+<style type="text/css">
+  .studentInfo {
+    width: 1430px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+
+  .studentInfo td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .studentInfo tr:nth-child(even) {
+    background-color: rgba(217, 148, 148, 0.76);
+    font-weight: bolder;
+  }
+
+  .studentInfo tr:nth-child(odd) {
+    background-color: rgba(248, 194, 194, 0.76);
+    font-weight: bolder;
+  }
+
+
+  .header {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgba(155, 8, 8, 0.76);
+    color: rgb(255, 255, 255);
+  }
+  .col-8{
+    width: 1430px;
+    height: 800px;
+    font-family: cursive, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+</style>
+<table class="studentInfo">
+  <tbody><tr>
+    <td class="header" colspan="6">Q1:GENDER WISE PATIENT COUNT</td>
+  </tr>
+  <tr class="mainRow">
+    <td>Gender</td>
+    <td>Total Patient</td>
+  </tr>
+  <tr class="altRow"*ngFor="let data of data_all">
+    <td>{{ data.gender }}</td>
+    <td>{{ data.total_patient }}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="col-8">
+  <div class="chart-wrapper">
+    <canvas baseChart
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions">
+    </canvas>
+<!--    <canvas baseChart>-->
+<!--&lt;!&ndash;            [type]="'bar'"&ndash;&gt;-->
+<!--            [datasets]="chartData"-->
+<!--            [labels]="chartLabels"-->
+<!--            [options]="chartOptions">-->
+<!--    </canvas>-->
+  </div>
+</div>
+</html>

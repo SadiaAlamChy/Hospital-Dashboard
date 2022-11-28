@@ -1,0 +1,207 @@
+<!--<h1>Query 8</h1>-->
+<!--<div>-->
+<!--  <li *ngFor="let d of data_all">-->
+<!--    {{d.item}} - {{d.quarter}}- {{d.sales}}-->
+<!--  </li>-->
+<!--</div>-->
+<!--<style>-->
+<!--  table, th , td  {-->
+<!--    border: 1px solid grey;-->
+<!--    border-collapse: collapse;-->
+<!--    padding: 5px;-->
+<!--  }-->
+<!--  table tr:nth-child(odd) {-->
+<!--    background-color: #f1f1f1;-->
+<!--  }-->
+<!--  table tr:nth-child(even) {-->
+<!--    background-color: #ffffff;-->
+<!--  }-->
+<!--</style>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
+<!--<body>-->
+<!--<div>-->
+
+<!--  <table>-->
+<!--    <tr *ngFor="let d of data_all">-->
+<!--      <td>{{ d.item }}</td>-->
+<!--      <td>{{ d.quarter }}</td>-->
+<!--      <td>{{ d.sales }}</td>-->
+<!--    </tr>-->
+<!--  </table>-->
+
+<!--</div>-->
+
+<!--<style>-->
+<!--  table, th , td  {-->
+<!--    border: 1px solid grey;-->
+<!--    border-collapse: collapse;-->
+<!--    padding: 5px;-->
+<!--  }-->
+<!--  table tr:nth-child(odd) {-->
+<!--    background-color: #f1f1f1;-->
+<!--  }-->
+<!--  table tr:nth-child(even) {-->
+<!--    background-color: #ffffff;-->
+<!--  }-->
+<!--  h2{-->
+<!--    background-color: rgba(205, 92, 92, 0.85)-->
+
+<!--  }-->
+<!--</style>-->
+
+<!--<style type="text/css">-->
+<!--  .studentInfo {-->
+<!--    width: 1000px;-->
+<!--    border-collapse: collapse;-->
+<!--    text-align: center;-->
+<!--    vertical-align: middle;-->
+<!--    padding: 10px;-->
+<!--    border-radius: 4px;-->
+<!--    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);-->
+<!--  }-->
+
+<!--  .studentInfo td {-->
+<!--    border: 1px solid #ffffff;-->
+<!--    text-align: center;-->
+<!--    vertical-align: middle;-->
+<!--  }-->
+
+<!--  .studentInfo tr:nth-child(even) {-->
+<!--    background-color: rgba(217, 148, 148, 0.76);-->
+<!--    font-weight: bolder;-->
+<!--  }-->
+
+<!--  .studentInfo tr:nth-child(odd) {-->
+<!--    background-color: rgba(248, 194, 194, 0.76);-->
+<!--    font-weight: bolder;-->
+<!--  }-->
+
+
+<!--  .header {-->
+<!--    text-align: center;-->
+<!--    font-weight: bolder;-->
+<!--    background-color: rgba(155, 8, 8, 0.76);-->
+<!--    color: rgb(255, 255, 255);-->
+<!--  }-->
+<!--</style>-->
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="col-4 p-2">-->
+<!--      <div class="card p-2 text-center">-->
+<!--        <h2 class="text-primary text-center" >Total Sales in 2015</h2>-->
+<!--        <div class="container" >-->
+<!--          <div class="row">-->
+<!--&lt;!&ndash;            <table>&ndash;&gt;-->
+<!--&lt;!&ndash;              <tr *ngFor="let d of data_all">&ndash;&gt;-->
+<!--&lt;!&ndash;                <td>{{ d.item_name }}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;                <td>{{ d.quarter }}</td>&ndash;&gt;-->
+<!--&lt;!&ndash;                <td>{{ d.sum }}</td>&ndash;&gt;-->
+
+<!--&lt;!&ndash;              </tr>&ndash;&gt;-->
+<!--&lt;!&ndash;            </table>&ndash;&gt;-->
+
+<!--            <table class="studentInfo">-->
+<!--              <tbody><tr>-->
+<!--                <td class="header" colspan="6">Q8:Worst Quarter for Items</td>-->
+<!--              </tr>-->
+<!--              <tr class="mainRow">-->
+<!--                <td>Item Name</td>-->
+<!--                <td>Quarter</td>-->
+<!--                <td>Total Sales on Quarter</td>-->
+<!--              </tr>-->
+<!--              <tr class="altRow"*ngFor="let d of data_all">-->
+<!--                <td>{{ d.item_name }}</td>-->
+<!--                <td>{{ d.quarter }}</td>-->
+<!--                <td>{{ d.sum }}</td>-->
+<!--              </tr>-->
+<!--              </tbody>-->
+<!--            </table>-->
+
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-8">-->
+<!--      <div class="chart-wrapper">-->
+<!--        <canvas baseChart-->
+<!--                [datasets]="chartData"-->
+<!--                [labels]="chartLabels"-->
+<!--                [options]="chartOptions">-->
+<!--        </canvas>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+<html>
+<style type="text/css">
+  .studentInfo {
+    width: 1430px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+
+  .studentInfo td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .studentInfo tr:nth-child(even) {
+    background-color: rgba(217, 148, 148, 0.76);
+    font-weight: bolder;
+  }
+
+  .studentInfo tr:nth-child(odd) {
+    background-color: rgba(248, 194, 194, 0.76);
+    font-weight: bolder;
+  }
+
+
+  .header {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgba(155, 8, 8, 0.76);
+    color: rgb(255, 255, 255);
+  }
+  .col-8{
+    width: 1430px;
+    height: 800px;
+    font-family: cursive, sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 20px 23px rgba(236, 179, 179, 0.76);
+  }
+</style>
+<table class="studentInfo">
+  <tbody><tr>
+    <td class="header" colspan="6">Q3:Total Sales of Barisal</td>
+  </tr>
+  <tr class="mainRow">
+    <td>Item Name</td>
+    <td>Quarter</td>
+    <td>Sales on Quarter</td>
+  </tr>
+  <tr class="altRow"*ngFor="let d of data_all">
+    <td>{{ d.item_name }}</td>
+    <td>{{ d.quarter }}</td>
+    <td>{{ d.sum }}</td>
+  </tr>
+  </tbody>
+</table>
+<div class="col-8">
+  <div class="chart-wrapper">
+    <canvas baseChart
+            [datasets]="chartData"
+            [labels]="chartLabels"
+            [options]="chartOptions">
+    </canvas>
+  </div>
+</div>
+</html>

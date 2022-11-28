@@ -1,0 +1,89 @@
+<!--<h1>Query 9</h1>-->
+<!--<div>-->
+<!--  <li *ngFor="let d of data_all">-->
+<!--    {{d.Item}} - {{d.Division}}- {{d.Sales}}-->
+<!--  </li>-->
+<!--</div>-->
+
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<style>-->
+<!--  table, th , td  {-->
+<!--    border: 1px solid grey;-->
+<!--    border-collapse: collapse;-->
+<!--    padding: 5px;-->
+<!--  }-->
+<!--  table tr:nth-child(odd) {-->
+<!--    background-color: #f1f1f1;-->
+<!--  }-->
+<!--  table tr:nth-child(even) {-->
+<!--    background-color: #ffffff;-->
+<!--  }-->
+<!--</style>-->
+<!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>-->
+<!--<body>-->
+
+<!--<div>-->
+
+<!--  <table>-->
+<!--    <tr *ngFor="let d of data_all">-->
+<!--      <td>{{ d.Item }}</td>-->
+<!--      <td>{{ d.Division }}</td>-->
+<!--      <td>{{ d.Sales }}</td>-->
+<!--    </tr>-->
+<!--  </table>-->
+
+<!--</div>-->
+
+
+<html>
+<style type="text/css">
+  .studentInfo {
+    width: 1430px;
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .studentInfo td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .studentInfo tr:nth-child(even) {
+    background-color: rgba(217, 148, 148, 0.76);
+    font-weight: bolder;
+  }
+
+  .studentInfo tr:nth-child(odd) {
+    background-color: rgba(248, 194, 194, 0.76);
+    font-weight: bolder;
+  }
+
+
+  .header {
+    text-align: center;
+    font-weight: bolder;
+    background-color: rgba(155, 8, 8, 0.76);
+    color: rgb(255, 255, 255);
+  }
+</style>
+<table class="studentInfo">
+  <tbody><tr>
+    <td class="header" colspan="6">Q9:Division wise sales for Items</td>
+  </tr>
+  <tr class="mainRow">
+    <td>Item Name</td>
+    <td>Division</td>
+    <td>Total Sales</td>
+  </tr>
+  <tr class="altRow"*ngFor="let d of data_all">
+    <td>{{ d.Item }}</td>
+    <td>{{ d.Division }}</td>
+    <td>{{ d.Sales }}</td>
+  </tr>
+  </tbody>
+</table>
+</html>
+
